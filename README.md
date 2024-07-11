@@ -92,7 +92,7 @@ There were a few limitations within this data set. One limitation was that it on
 ### References
 
 1. SQL for Businesses by werty
-2. [Stack Overflow](https://stack.com)
+2. [Data.gov](https://data.gov/)
 
 Thank you for reading!
 
