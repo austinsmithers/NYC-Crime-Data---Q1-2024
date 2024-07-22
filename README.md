@@ -6,16 +6,13 @@
 
 The goal of this project was to practice my data cleaning and EDA skills by exploring criminal behavior throughout all 5 boroughs in New York City. The data set consists of reported crimes from the NYPD spanning January - March of 2024 and includes the type of crime, location, date, and characteristics about the perpetrator (gender, age, race). I was interested in learning about how crimes and criminals differ across the boroughs.
 
-<img width="253" alt="Screen Shot 2024-06-11 at 10 41 54 PM" src="https://github.com/austinsmithers/Project-1/assets/172429232/7fda4439-bd27-4491-86aa-dae2469ac58e">
-
-
 ### Data Sources
 
 The primary dataset used for this analysis is "NYPD_Arrest_Data__Year_to_Date_.csv" containing detailed information from data.gov on crimes that occurred in New York City between January - March of 2024.
 
 ### Tools
 
-- SQL Server - Data Analysis
+- BigQuery - Data Analysis
 - Tableau - Creating Report
 
 ### Data Cleaning/Preparation
@@ -38,7 +35,7 @@ Add viz's if possible here for EDA
 
 ### Data Analysis
 
-Through my analaysis, I employed different techniques, including aggregations, CTE's, joins, window functions, case statements, etc. to answer the above questions. The following code used a CTE and a window function to find the 5 most prevalent types of crime in each borough:
+Through my analaysis, I employed different techniques, including aggregations, CTE's, joins, window functions, case statements, etc. to answer the above questions. The following code uses a CTE and a window function to find the 5 most prevalent types of crime in each borough:
 
 ```sql
 WITH ranked_strings AS (
@@ -54,7 +51,7 @@ FROM ranked_strings
 WHERE rn BETWEEN 1 AND 5;
 ```
 
-The following code used a CTE, window function, join, and standardized the percentage of crime to the population, in order to better compare the rate of crime across boroughs:
+The following code uses a CTE, window function, and a join, and standardized the percentage of crime to the population, in order to better compare the rate of crime across boroughs:
 
 ```sql
 WITH t AS (
@@ -91,17 +88,4 @@ There were a few limitations within this data set. One limitation was that it on
 
 ### References
 
-1. SQL for Businesses by werty
-2. [Data.gov](https://data.gov/)
-
-Thank you for reading!
-
-| Year | Sales |
-| ---------- | ---------- |
-| 2010 | $1M |
-| 2011 | $4M |
-
-<!--
-hello
--->
-hello
+1. [Data.gov](https://data.gov/)
